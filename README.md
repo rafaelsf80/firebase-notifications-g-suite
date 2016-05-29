@@ -11,16 +11,16 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 
 ## Usage
 
-1) Compile and launch the apk. Make sure you add a google-services.json file of your Firebase project
+1) Compile and launch the Android app. Make sure you add a **google-services.json** file of your Firebase project
 
-2) Create a Google Form from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form
+2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form
 
-3) Following [this video](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an Apps Script to send the notification. You will need an API key of your Firebase project
+3) Following [this video](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. You will need an API key of your Firebase project
 
 
 ## Messaging Server
 
-The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. A sample screenshot ban be found below.
+The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to groups as part of filling the form. A sample screenshot can be found below.
 
 
 ## Dependencies
