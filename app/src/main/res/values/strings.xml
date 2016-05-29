@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Work Messaging</string>
+
+    <string name="gcm_message_sent">Token updated to server succesfully !</string>
+    <string name="atleast_one_topic_selected">At least one topic must be selected</string>
+    <string name="registering_message">Generating token ... </string>
+    <string name="token_error_message">Error trying to generate or update the token. Please, try again or contact technical support.</string>
+
+    <string name="bt_select_group">Choose group and close</string>
+
+    <string-array name="groups">
+        <item>Tous</item>
+        <item>Paris - 1er arrondissement</item>
+        <item>Paris - 2e arrondissement</item>
+        <item>Paris - 3e arrondissement</item>
+        <item>En dehors de Paris</item>
+        <item>Paris Autres</item>
+    </string-array>
+
+</resources>
+

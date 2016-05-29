@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Work Messaging</string>
+
+    <string name="gcm_message_sent">TToken actualizado al servidor !</string>
+    <string name="atleast_one_topic_selected">Al menos un debe elegir un grypo</string>
+    <string name="registering_message">Generando token...</string>
+    <string name="token_error_message">Error al obtener token. Inténtelo de nuevo ó contacte con soporte.</string>
+
+    <string name="bt_select_group">Elija grupo y cierre:</string>
+
+    <string-array name="groups">
+        <item>Tous</item>
+        <item>Madrid - Zona 1</item>
+        <item>Madrid - Zona 2</item>
+        <item>Madrid - Zona 3</item>
+        <item>Fuera de Madrid</item>
+        <item>Otros</item>
+    </string-array>
+
+</resources>
+
