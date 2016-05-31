@@ -21,7 +21,54 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 ## Messaging Server
 
 The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to groups as part of filling the form. A sample screenshot can be found below.
+The following code should be added to the spreadsheet responses:
 
+```javascript
+
+function onOpen() {
+  var sheet = SpreadsheetApp.getActive();
+  // trigger to send email every time a form is submitted
+  ScriptApp.newTrigger("sendMessage")
+   .forSpreadsheet(sheet)
+   .onFormSubmit()
+   .create();
+}
+
+function sendMessage() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var lastRow = sheet.getLastRow();   // Row to process
+  
+  // Fetch the range of columns 2 and 3 (in this case, single cell of last row)
+  var msgRange = sheet.getRange(lastRow, 2, 1, 1); 
+  var groupRange = sheet.getRange(lastRow, 3, 1, 1);
+  // Fetch values for the row in the Range.
+  var msg = msgRange.getValue();
+  var topic = groupRange.getValue();  
+  
+  var apiKey = 'YOUR_API_KEY';
+
+  // As per doc, RegEx compliant topic must be: /topics/[a-zA-Z0-9-_.#%]+
+  var regex_compliant_topic = topic.replace(/[-\s]+/g, '_');
+  Logger.log(regex_compliant_topic);
+  Logger.log(msg); 
+  
+  var payload = {'to' : "/topics/" + regex_compliant_topic,
+                 'data' : {
+                   'message' : msg
+                 }};
+  
+  var urlFetchOptions =  {'contentType' : 'application/json',
+                          'headers' : {'Authorization' : 'key=' + apiKey},
+                          'method' : 'post',
+                          'payload' : JSON.stringify(payload)};
+  
+  var gcmUrl = 'https://fcm.googleapis.com/fcm/send';
+  var response = UrlFetchApp.fetch(gcmUrl,urlFetchOptions).getContentText()
+  
+  Logger.log(response); //for testing purposes. improve error handling here
+}
+
+```
 
 ## Dependencies
 
