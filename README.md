@@ -13,7 +13,7 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 
 1) Compile and launch the Android app. Make sure you add a **google-services.json** file of your Firebase project
 
-2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form
+2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form.
 
 3) Following [this video](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. You will need an API key of your Firebase project
 
@@ -21,7 +21,7 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 ## Messaging Server
 
 The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to groups as part of filling the form. A sample screenshot can be found below.
-The following code should be added to the spreadsheet responses:
+The following code should be added to the spreadsheet responses (replace your API key accordingly):
 
 ```javascript
 
@@ -85,5 +85,5 @@ The following libraries must be included for proper compilation and execution:
 
 Main activity and Google Form:
 
-<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/screenshots/main.png" alt="alt text" width="100" height="200">
-<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/screenshots/form.png" alt="alt text" width="100" height="200">
+<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/app/screenshots/main.png" alt="alt text" width="100" height="200">
+<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/app/screenshots/form.png" alt="alt text" width="100" height="200">
