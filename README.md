@@ -1,6 +1,6 @@
-# Notifications from a Google Form to Android devices using Firebase #
-Android app to demonstrate how to send [topic notifications](https://firebase.google.com/docs/notifications/android/console-topics#set_up_the_sdk) using Firebase Cloud Messaging (formerly Google Cloud Messaging).
-Instead of a 3rd-party messaging server, a Google Form is used to generate and send the notification.
+# Serverless Notifications to Android devices using Firebase and Google Apps #
+Android app to demonstrate how to send [topic notifications](https://firebase.google.com/docs/notifications/android/console-topics#set_up_the_sdk) using **Firebase Cloud Messaging** (formerly Google Cloud Messaging).
+Instead of a 3rd-party messaging server, a Google Form is used to generate and send the notification. No messaging server required.
 
 The apk receives notifications from a Google Form, and makes use of Apps Script to trigger en event to send a notification, as explained [in this video, min 18:00](https://www.youtube.com/watch?v=RSgMEtRl0sw).
 
@@ -11,7 +11,7 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 
 ## Usage
 
-1) Compile and launch the Android app. Make sure you add a **google-services.json** file of your Firebase project
+1) Compile and launch the Android app. Make sure you properly add a **google-services.json** file of your Firebase project
 
 2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form.
 
@@ -86,4 +86,4 @@ The following libraries must be included for proper compilation and execution:
 Main activity and Google Form:
 
 <img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/app/screenshots/main.png" alt="alt text" width="100" height="200">
-<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/app/screenshots/form.png" alt="alt text" width="100" height="200">
+<img src="https://raw.githubusercontent.com/rafaelsf80/firebase-notifications-for-work/master/app/screenshots/form.png" alt="alt text" width="200" height="300">
