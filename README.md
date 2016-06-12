@@ -18,7 +18,7 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 3) Following [this video](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. You will need an API key of your Firebase project
 
 
-## Messaging Server
+## Serverless messaging
 
 The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to groups as part of filling the form. A sample screenshot can be found below.
 The following code should be added to the spreadsheet responses (replace your API key accordingly):
