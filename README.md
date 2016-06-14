@@ -1,4 +1,4 @@
-# Serverless Notifications to Android devices using Firebase and Google Apps #
+# Serverless notifications to Android devices using Firebase and Google Apps #
 Android app to demonstrate how to send [topic notifications](https://firebase.google.com/docs/notifications/android/console-topics#set_up_the_sdk) using **Firebase Cloud Messaging** (formerly Google Cloud Messaging).
 Instead of a 3rd-party messaging server, a Google Form is used to generate and send the notification. No messaging server required.
 
@@ -15,12 +15,13 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 
 2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form.
 
-3) Following [this video](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. You will need an API key of your Firebase project
+3) Following [this video, min 18:00](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. 
+You will need an API key of your Firebase project inside the script.
 
 
 ## Serverless messaging
 
-The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to groups as part of filling the form. A sample screenshot can be found below.
+The backend is just a [Google Form](https://www.google.es/intl/es/forms/about/), hosted on Google Drive. Messages are sent to the group selected in the form. A sample form screenshot can be found below.
 The following code should be added to the spreadsheet responses (replace your API key accordingly):
 
 ```javascript
