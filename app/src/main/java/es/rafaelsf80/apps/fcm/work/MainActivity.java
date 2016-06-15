@@ -254,7 +254,6 @@ public class MainActivity extends AppCompatActivity {
                 holder.tv.setText(" Preferé");
             }
             return convertView;
-
         }
     }
 }

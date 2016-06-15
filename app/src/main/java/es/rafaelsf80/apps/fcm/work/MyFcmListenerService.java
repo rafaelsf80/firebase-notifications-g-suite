@@ -86,12 +86,6 @@ public class MyFcmListenerService extends FirebaseMessagingService {
      */
     private void sendNotification(String message) {
 
-        //Intent intent = new Intent(this, com.rafaelsf80.apps.laposte.MainActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        //PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-        //        PendingIntent.FLAG_ONE_SHOT);
-
         // Pattern for recognizing a URL, based on RFC 3986
         Pattern urlPattern = Pattern.compile(
                 "(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"
