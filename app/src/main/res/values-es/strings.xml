@@ -9,11 +9,11 @@
     <string name="bt_select_group">Elija grupo y cierre:</string>
 
     <string-array name="groups">
-        <item>Tous</item>
-        <item>Madrid - Zona 1</item>
-        <item>Madrid - Zona 2</item>
-        <item>Madrid - Zona 3</item>
-        <item>Fuera de Madrid</item>
+        <item>Todos</item>
+        <item>España</item>
+        <item>Italia</item>
+        <item>Colombia</item>
+        <item>México</item>
         <item>Otros</item>
     </string-array>
 
