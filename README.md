@@ -46,7 +46,7 @@ function sendMessage() {
   var msg = msgRange.getValue();
   var topic = groupRange.getValue();  
   
-  var apiKey = 'YOUR_API_KEY';
+  var apiKey = 'YOUR_API_KEY'; // **** API_KEY ****
 
   // As per doc, RegEx compliant topic must be: /topics/[a-zA-Z0-9-_.#%]+
   var regex_compliant_topic = topic.replace(/[-\s]+/g, '_');
