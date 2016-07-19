@@ -13,9 +13,9 @@ Learn more use cases and how to use Google Apps at Work [here](https://apps.goog
 
 1) Compile and launch the Android app. Make sure you properly add a **google-services.json** file of your Firebase project
 
-2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the form.
+2) Create a **Google Form** from scratch. At least on of the fields should be the group (topic). Make sure the topic names are the same in both the Android app (values/strings.xml) and the Google Form.
 
-3) Following [this video, min 18:00](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. 
+3) Following [this video, min 18:00](https://www.youtube.com/watch?v=RSgMEtRl0sw), create an **Apps Script** to send the notification in the responses spreadsheet of the form. See code below. 
 You will need an API key of your Firebase project inside the script.
 
 
@@ -28,7 +28,7 @@ The following code should be added to the spreadsheet responses (replace your AP
 
 function onOpen() {
   var sheet = SpreadsheetApp.getActive();
-  // trigger to send email every time a form is submitted
+  // trigger to send notification every time a form answer is submitted
   ScriptApp.newTrigger("sendMessage")
    .forSpreadsheet(sheet)
    .onFormSubmit()
@@ -46,7 +46,7 @@ function sendMessage() {
   var msg = msgRange.getValue();
   var topic = groupRange.getValue();  
   
-  var apiKey = 'YOUR_API_KEY'; // **** API_KEY ****
+  var apiKey = 'YOUR_API_KEY'; // **** REPLACE WITH YOUR API_KEY ****
 
   // As per doc, RegEx compliant topic must be: /topics/[a-zA-Z0-9-_.#%]+
   var regex_compliant_topic = topic.replace(/[-\s]+/g, '_');
@@ -66,7 +66,7 @@ function sendMessage() {
   var gcmUrl = 'https://fcm.googleapis.com/fcm/send';
   var response = UrlFetchApp.fetch(gcmUrl,urlFetchOptions).getContentText()
   
-  Logger.log(response); //for testing purposes. improve error handling here
+  Logger.log(response); // for testing purposes. Improve error handling here
 }
 
 ```
