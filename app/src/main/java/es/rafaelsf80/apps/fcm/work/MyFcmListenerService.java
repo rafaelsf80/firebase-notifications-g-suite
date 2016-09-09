@@ -111,11 +111,11 @@ public class MyFcmListenerService extends FirebaseMessagingService {
                 intent, 0);
 
         Bitmap largeIcon = BitmapFactory.decodeResource(getApplicationContext().getResources(),
-                R.mipmap.firebase);
+                R.mipmap.logo_hotels);
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.firebase)
+                .setSmallIcon(R.mipmap.logo_hotels)
                 .setLargeIcon(largeIcon)
                 .setColor(Color.BLUE)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(message))

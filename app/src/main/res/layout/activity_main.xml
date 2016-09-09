@@ -12,7 +12,7 @@
         android:layout_width="200dp"
         android:layout_height="300dp"
         android:id="@+id/imLogo"
-        android:src="@mipmap/firebase"
+        android:src="@mipmap/logo_hotels"
         android:layout_gravity="center_horizontal" />
 
     <Button

@@ -10,11 +10,9 @@
 
     <string-array name="groups">
         <item>Todos</item>
-        <item>España</item>
-        <item>Italia</item>
-        <item>Colombia</item>
-        <item>México</item>
-        <item>Otros</item>
+        <item>Catering</item>
+        <item>Servicio_Habitaciones</item>
+        <item>Actividades_Hotel</item>
     </string-array>
 
 </resources>
