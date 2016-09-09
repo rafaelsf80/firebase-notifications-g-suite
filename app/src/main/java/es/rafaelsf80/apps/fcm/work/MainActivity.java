@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         if (SHOW_UI) {
             setContentView(R.layout.activity_main);
             mMainLL = (LinearLayout) findViewById(R.id.llMain);
